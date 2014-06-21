@@ -67,14 +67,14 @@ plot1_TotalEmissionsPM2.5_USA_1999_to_2008 = function()
           cex.axis = 0.8,
           args.legend = list(title = "Legend: Color - Year", x = "topright", cex = 1.0))
   # Add a dashed line relying each total emissions from PM2.5 for 1999, 2002, 2005, 2008
-  lines(NEI_Emmissions_Year,lw = 2,col = "navyblue",lty = 2,cex = 1)
+  lines(NEI_Emmissions_Year,lw = 2,col = "darkgrey",lty = 2,cex = 1)
   # Add points to each total emissions from PM2.5 for 1999, 2002, 2005, 2008           
-  points(NEI_Emmissions_Year,lw = 4,col= "navyblue", pch = 15)
+  points(NEI_Emmissions_Year,lw = 4,col= "darkgrey", pch = 15)
   # Add all values for total emissions from PM2.5 for 1999, 2002, 2005, 2008 next to the points
-  text(1, NEI_Emmissions_Year[1], labels = NEI_Emmissions_Year[1], pos = 3,cex = 0.7)
-  text(2, NEI_Emmissions_Year[2], labels = NEI_Emmissions_Year[2], pos = 3,cex = 0.7)
-  text(3, NEI_Emmissions_Year[3], labels = NEI_Emmissions_Year[3], pos = 3,cex = 0.7)
-  text(4, NEI_Emmissions_Year[4], labels = NEI_Emmissions_Year[4], pos = 3,cex = 0.7)
+  text(1, NEI_Emmissions_Year[1], labels = round(NEI_Emmissions_Year[1], 0), pos = 3,cex = 1, col = "navyblue")
+  text(2, NEI_Emmissions_Year[2], labels = round(NEI_Emmissions_Year[2], 0), pos = 3,cex = 1, col = "navyblue")
+  text(3, NEI_Emmissions_Year[3], labels = round(NEI_Emmissions_Year[3], 0), pos = 3,cex = 1, col = "navyblue")
+  text(4, NEI_Emmissions_Year[4], labels = round(NEI_Emmissions_Year[4], 0), pos = 3,cex = 1, col = "navyblue")
 
   # Save png
   dev.copy(png, filename = "plot1.png", height = 600, width = 800, unit = "px", bg = "transparent")

@@ -61,94 +61,7 @@ plot2_TotalEmissionsPM2.5_BALTIMORE_1999_to_2008 = function()
           col = c("darkgreen", "olivedrab4", "green2", "darkolivegreen1"),
           border = "blue",
           xlab = "Year",
-          ylab ="########################
-
-### PM25_USA_EPA_NEI ###
-          
-          ########################
-          
-          # Question 1 : Have total emissions from PM2.5 decreased in the United States from 1999 to 2008?
-          # Using the base plotting system, make a plot showing the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.
-          
-          ########################
-          
-          ###    Resources     ###
-          
-          ########################
-          
-          # EPA Government references
-          # Reference 1. 2011 National Emissions Inventory, version 1 Technical Support Document November 2013 - DRAFT
-          # http://www.epa.gov/ttn/chief/net/2008neiv3/2008_neiv3_tsd_draft.pdf
-          # Reference 2. 2008 National Emissions Inventory, version 3 Technical Support Document September 2013 - DRAFT
-          # http://www.epa.gov/ttn/chief/net/2011nei/2011_neiv1_tsd_draft.pdf
-          
-          # STATE Government references
-          # Reference 3. Methodologies for U.S. Greenhouse Gas Emissions Projections: Non-CO2 and Non-Energy CO2 Sources DECEMBER, 2013
-          # http://www.state.gov/documents/organization/219472.pdf
-          
-          # barplot
-          # 1 - http://www.ats.ucla.edu/stat/r/faq/barplotplus.htm
-          # 2 - http://www.spw.uzh.ch/vangijn/teaching/typologyinpractice/weekbyweek/R_Bar_plots.pdf
-          
-          ########################
-          
-          ###   plot1 R code   ###
-          
-          ########################
-          
-          # Create a function called plot1_TotalEmissionsPM2.5_USA_1999_to_2008() to do the requested plot
-          
-          plot1_TotalEmissionsPM2.5_USA_1999_to_2008 = function()
-{
-          # Set the working directory on my local machine
-          setwd("~/Desktop/Data Science Specialization/Exploratory Data Analysis/Course project 2")
-          
-          # Read the PM2.5 Emissions Data in summarySCC_PM25.rds file with readRDS() function
-          NEI <- readRDS("summarySCC_PM25.rds")
-          
-          # Read the Source Classification Code Table in Source_Classification_Code.rds file with readRDS() function 
-          SCC <- readRDS("Source_Classification_Code.rds")
-          
-          # Sum emissions by year: use the function tapply()
-          NEI_Emmissions_Year <- tapply(NEI$Emissions,NEI$year,sum)
-          
-          # Plot barplot
-          barplot(NEI_Emmissions_Year,
-          names.arg = toupper(names(NEI_Emmissions_Year)),
-          legend.text = TRUE,
-          col = c("darkviolet", "orangered", "deeppink", "gold"),
-          border = "blue",
-          xlab = "Year",
-          ylab = "PM2.5 Emissions (Tons)",
-          ylim = c(0,8000000),
-          main = "USA Total PM25 Emissions from 1999 to 2008",
-          font.main = 3,
-          cex.main = 1.5,
-          sub = "source : summarySCC_PM25.rds",
-          cex.sub = 0.8,
-          cex.names = 0.8,
-          cex.axis = 0.8,
-          args.legend = list(title = "Legend: Color - Year", x = "topright", cex = 1.0))
-          # Add a dashed line relying each total emissions from PM2.5 for 1999, 2002, 2005, 2008
-          lines(NEI_Emmissions_Year,lw = 2,col = "navyblue",lty = 2,cex = 1)
-          # Add points to each total emissions from PM2.5 for 1999, 2002, 2005, 2008           
-          points(NEI_Emmissions_Year,lw = 4,col= "navyblue", pch = 15)
-          # Add all values for total emissions from PM2.5 for 1999, 2002, 2005, 2008 next to the points
-          text(1, NEI_Emmissions_Year[1], labels = NEI_Emmissions_Year[1], pos = 3,cex = 0.7)
-          text(2, NEI_Emmissions_Year[2], labels = NEI_Emmissions_Year[2], pos = 3,cex = 0.7)
-          text(3, NEI_Emmissions_Year[3], labels = NEI_Emmissions_Year[3], pos = 3,cex = 0.7)
-          text(4, NEI_Emmissions_Year[4], labels = NEI_Emmissions_Year[4], pos = 3,cex = 0.7)
-          
-          # Save png
-          dev.copy(png, filename = "plot1.png", height = 600, width = 800, unit = "px", bg = "transparent")
-          
-          # Release screen
-          dev.off()
-}
-          
-          plot1_TotalEmissionsPM2.5_USA_1999_to_2008()
-          
-          # Answer 1: PM2.5 Total Emissions decreased in the USA between 1999 and 2008.",
+          ylab ="PM2.5 Emissions (Tons)",
           ylim=c(0,3500),
           main = "Baltimore (USA) Total PM25 Emissions from 1999 to 2008",
           font.main = 3,
@@ -159,14 +72,14 @@ plot2_TotalEmissionsPM2.5_BALTIMORE_1999_to_2008 = function()
           cex.axis = 0.8,
           args.legend = list(title = "Legend: Color - Year", x = "topright", cex = 0.75))
   # Add a dashed line relying each total emissions from PM2.5 for 1999, 2002, 2005, 2008
-  lines(NEI_Emmissions_Baltimore_Year,lw = 2,col = "orangered",lty = 2,cex = 1)
+  lines(NEI_Emmissions_Baltimore_Year,lw = 2,col = "darkgrey",lty = 2,cex = 1)
   # Add points to each total emissions from PM2.5 for 1999, 2002, 2005, 2008           
-  points(NEI_Emmissions_Baltimore_Year,lw = 4,col= "orangered", pch = 15)
+  points(NEI_Emmissions_Baltimore_Year,lw = 4,col= "darkgrey", pch = 15)
   # Add all values for total emissions from PM2.5 for 1999, 2002, 2005, 2008 next to the points
-  text(1, NEI_Emmissions_Baltimore_Year[1], labels = NEI_Emmissions_Baltimore_Year[1], pos = 3,cex = 0.7)
-  text(2, NEI_Emmissions_Baltimore_Year[2], labels = NEI_Emmissions_Baltimore_Year[2], pos = 3,cex = 0.7)
-  text(3, NEI_Emmissions_Baltimore_Year[3], labels = NEI_Emmissions_Baltimore_Year[3], pos = 3,cex = 0.7)
-  text(4, NEI_Emmissions_Baltimore_Year[4], labels = NEI_Emmissions_Baltimore_Year[4], pos = 3,cex = 0.7)
+  text(1, NEI_Emmissions_Baltimore_Year[1], labels = round(NEI_Emmissions_Baltimore_Year[1], 0), pos = 3,cex = 1)
+  text(2, NEI_Emmissions_Baltimore_Year[2], labels = round(NEI_Emmissions_Baltimore_Year[2], 0), pos = 3,cex = 1)
+  text(3, NEI_Emmissions_Baltimore_Year[3], labels = round(NEI_Emmissions_Baltimore_Year[3], 0), pos = 3,cex = 1)
+  text(4, NEI_Emmissions_Baltimore_Year[4], labels = round(NEI_Emmissions_Baltimore_Year[4], 0), pos = 3,cex = 1)
   
   # Save png file in working directory
   dev.copy(png, filename = "plot2.png", height = 600, width = 800, unit = "px", bg = "transparent")
