@@ -273,26 +273,9 @@ hljs.initHighlightingOnLoad();
 
 <p>You can read each of the two files using the <code>readRDS()</code> function in R. For example, reading in each file can be done with the following code:</p>
 
-<pre><code class="r">## This first line will likely take a few seconds. Be patient!
+<pre><code>## This first line will likely take a few seconds. Be patient!
 NEI &lt;- readRDS(&quot;summarySCC_PM25.rds&quot;)
-</code></pre>
-
-<pre><code>## Warning: impossible d&#39;ouvrir le fichier compressé &#39;summarySCC_PM25.rds&#39;,
-## cause probable : &#39;No such file or directory&#39;
-</code></pre>
-
-<pre><code>## Error: impossible d&#39;ouvrir la connexion
-</code></pre>
-
-<pre><code class="r">SCC &lt;- readRDS(&quot;Source_Classification_Code.rds&quot;)
-</code></pre>
-
-<pre><code>## Warning: impossible d&#39;ouvrir le fichier compressé
-## &#39;Source_Classification_Code.rds&#39;, cause probable : &#39;No such file or
-## directory&#39;
-</code></pre>
-
-<pre><code>## Error: impossible d&#39;ouvrir la connexion
+SCC &lt;- readRDS(&quot;Source_Classification_Code.rds&quot;)
 </code></pre>
 
 <p>as long as each of those files is in your current working directory (check by calling dir() and see if those files are in the listing).</p>
