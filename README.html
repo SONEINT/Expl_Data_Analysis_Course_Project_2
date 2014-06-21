@@ -209,7 +209,7 @@ hljs.initHighlightingOnLoad();
 
 <h3>Definition of Coal Combustion sources from EPA references and SCC/NEI datasets analysis</h3>
 
-<p>After several discussions on <em>Coursera Exploratory Data Analysis Forums</em>, quick analysis of the * EPA National Emissions Inventory documentations* (references 1 &amp; 2) and deep analysis of the <code>SCC</code> &amp; <code>NEI</code> datasets I have decided to retain as <em>Coal Combustion sources</em> the <em>four Coal Comabustion Category sources from EI sectors</em> and the <em>four Level Three Category sources</em>:</p>
+<p>After several discussions on <strong>Coursera Exploratory Data Analysis Forums</strong>, quick analysis of the <strong>EPA National Emissions Inventory documentations</strong> (references 1 &amp; 2) and deep analysis of the <code>SCC</code> &amp; <code>NEI</code> datasets I have decided to retain as <strong>Coal Combustion sources</strong> the <strong>four Coal Comabustion Category sources from EI sectors</strong> and the <strong>four Level Three Category sources</strong>:</p>
 
 <p>EI SECTORS:</p>
 
@@ -233,9 +233,9 @@ hljs.initHighlightingOnLoad();
 
 <h3>Definition of Motor Vehicle Emissions sources from MOVES (Motor Vehicle Emission Simulator) EPA Website:</h3>
 
-<p>As explained in the Website of MOVES2010, the &ldquo;<em>MOVES2010</em> is the state-of-the-art upgrade to EPA’s modeling tools for estimating emissions from <em>highway vehicles</em>, based on analysis of millions of emission test results and considerable advances in the Agency’s understanding of vehicle emissions. MOVES2010 replaces the previous model for estimating <em>on-road mobile source</em> emissions, MOBILE6.2&rdquo;.</p>
+<p>As explained in the Website of MOVES2010, the &ldquo;<strong>MOVES2010</strong> is the state-of-the-art upgrade to EPA’s modeling tools for estimating <strong>emissions from highway vehicles</strong>, based on analysis of millions of emission test results and considerable advances in the Agency’s understanding of vehicle emissions. MOVES2010 replaces the previous model for estimating <strong>on-road mobile source emissions</strong>, MOBILE6.2&rdquo;.</p>
 
-<p>So, I have decided to retain for <em>Motor Vehicle Emissions</em> the <em>Emissions from Highway Vehicles</em>.</p>
+<p>So, I have decided to retain for <strong>Motor Vehicle Emissions</strong> the <strong>Emissions from Highway Vehicles</strong>.</p>
 
 <p>See the CodeBook RMD file for further explanantions.</p>
 
@@ -255,7 +255,7 @@ hljs.initHighlightingOnLoad();
 
 <p>The zip file contains two files:</p>
 
-<p>PM2.5 Emissions Data (<code>summarySCC_PM25.rds</code>): This file contains a data frame with all of the PM2.5 emissions data for 1999, 2002, 2005, and 2008. For each year, the table contains number of <em>tons</em> of PM2.5 emitted from a specific type of source for the entire year. Here are the first few rows.</p>
+<p>PM2.5 Emissions Data (<code>summarySCC_PM25.rds</code>): This file contains a data frame with all of the PM2.5 emissions data for 1999, 2002, 2005, and 2008. For each year, the table contains number of <strong>tons</strong> of PM2.5 emitted from a specific type of source for the entire year. Here are the first few rows.</p>
 
 <pre><code class="r">##     fips      SCC Pollutant Emissions  type year
 ## 4  09001 10100401  PM25-PRI    15.714 POINT 1999
@@ -297,19 +297,19 @@ SCC &lt;- readRDS(&quot;Source_Classification_Code.rds&quot;)
 <p>You must address the following questions and tasks in your exploratory analysis. For each question/task you will need to make a single plot. Unless specified, you can use any plotting system in R to make your plot.</p>
 
 <ol>
-<li><p>Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the <em>base</em> plotting system, make a plot showing the <em>total</em> PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.</p></li>
-<li><p>Have total emissions from PM2.5 decreased in the <em>Baltimore City</em>, Maryland <code>(fips == &quot;24510&quot;)</code> from 1999 to 2008? Use the <em>base</em> plotting system to make a plot answering this question.</p></li>
-<li><p>Of the four types of sources indicated by the <code>type</code> (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999–2008 for <em>Baltimore City</em>? Which have seen increases in emissions from 1999–2008? Use the <em>ggplot2</em> plotting system to make a plot answer this question.</p></li>
+<li><p>Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the <strong>base</strong> plotting system, make a plot showing the <em>total</em> PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.</p></li>
+<li><p>Have total emissions from PM2.5 decreased in the <strong>Baltimore City</strong>, Maryland <code>(fips == &quot;24510&quot;)</code> from 1999 to 2008? Use the <strong>base</strong> plotting system to make a plot answering this question.</p></li>
+<li><p>Of the four types of sources indicated by the <code>type</code> (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999–2008 for <strong>Baltimore City</strong>? Which have seen increases in emissions from 1999–2008? Use the <strong>ggplot2</strong> plotting system to make a plot answer this question.</p></li>
 <li><p>Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?</p></li>
-<li><p>How have emissions from motor vehicle sources changed from 1999–2008 in <em>Baltimore City</em>?</p></li>
-<li><p>Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in <em>Los Angeles County</em>, California (<code>fips == &quot;06037&quot;</code>). Which city has seen greater changes over time in motor vehicle emissions?</p></li>
+<li><p>How have emissions from motor vehicle sources changed from 1999–2008 in <strong>Baltimore City</strong>?</p></li>
+<li><p>Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in <strong>Los Angeles County</strong>, California (<code>fips == &quot;06037&quot;</code>). Which city has seen greater changes over time in motor vehicle emissions?</p></li>
 </ol>
 
 <h3>Making and Submitting Plots</h3>
 
 <p>For each plot you should</p>
 
-<p>Construct the plot and save it to a <em>PNG file</em>.</p>
+<p>Construct the plot and save it to a <strong>PNG file</strong>.</p>
 
 <ul>
 <li>Create a separate R code file (<code>plot1.R</code>, <code>plot2.R</code>, etc.) that constructs the corresponding plot, i.e. code in <code>plot1.R</code> constructs the plot1.png plot. Your code file should include code for reading the data so that the plot can be fully reproduced. You should also include the code that creates the PNG file. Only include the code for a single plot (i.e. <code>plot1.R</code> should only include code for producing <code>plot1.png</code>)</li>
