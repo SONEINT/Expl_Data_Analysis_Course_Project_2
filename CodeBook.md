@@ -50,9 +50,9 @@ The SCC-EIS Sector cross-walk used for the summaries provided can be found in th
 
 * The *NEI Nonpoint data category* contains emissions estimates for sources which individually are too small in magnitude or too numerous to inventory as individual point sources, and which can often be estimated more accurately as a single aggregate source for a County or Tribal area. Examples are residential heating and consumer solvent use.
 
-*The *NEI Onroad and Nonroad data categories* contain mobile sources which are estimated for the 2011 NEI v1 via the MOVES2010b and NONROAD models, respectively. NONROAD was run within the National Mobile Inventory Model (NMIM). Note that emissions data for aircraft, locomotives, and commercial marine vessels are not included in the Nonroad data category starting with the 2008 NEI. Aircraft engine emissions occurring during Landing and Takeoff operations and the Ground Support Equipment and Auxiliary Power Units associated with the aircraft are included in the point data category at individual airports. Emissions from locomotives that occur at rail yards are also included in the point data category. In-flight aircraft emissions, locomotive emissions outside of the rail yards, and commercial marine vessel emissions (both underway and port emissions) are included in the NonPoint data category.
+* The *NEI Onroad and Nonroad data categories* contain mobile sources which are estimated for the 2011 NEI v1 via the MOVES2010b and NONROAD models, respectively. NONROAD was run within the National Mobile Inventory Model (NMIM). Note that emissions data for aircraft, locomotives, and commercial marine vessels are not included in the Nonroad data category starting with the 2008 NEI. Aircraft engine emissions occurring during Landing and Takeoff operations and the Ground Support Equipment and Auxiliary Power Units associated with the aircraft are included in the point data category at individual airports. Emissions from locomotives that occur at rail yards are also included in the point data category. In-flight aircraft emissions, locomotive emissions outside of the rail yards, and commercial marine vessel emissions (both underway and port emissions) are included in the NonPoint data category.
 
-*The *Events data category* includes wildfires, wild land fire use and prescribed burns. Wild land fire use is controlling a wildfire to use as a prescribed burn. This web page provides emissions for this data category as county totals. Day-specific and fire-specific emissions are available on the Emissions Modeling Clearinghouse with the 2011 emissions platform data.
+* The *Events data category* includes wildfires, wild land fire use and prescribed burns. Wild land fire use is controlling a wildfire to use as a prescribed burn. This web page provides emissions for this data category as county totals. Day-specific and fire-specific emissions are available on the Emissions Modeling Clearinghouse with the 2011 emissions platform data.
 
 
 PART II : VARIABLE DEFINITION (Coal Combustion & Motor Vehicle Emissions)
@@ -67,16 +67,8 @@ After several discussions on *Coursera Exploratory Data Analysis Forums*, quick 
 * Fuel Comb - Industrial Boilers, ICEs - Coal
 * Fuel Comb - Residential - Other -----------------> (partially)
 
-
-```r
+```
 levels(SCC$EI.Sector)
-```
-
-```
-## Error: objet 'SCC' introuvable
-```
-
-```r
 # interesting results: indentify the judicious Source Category sectors type
 # [13] "Fuel Comb - Comm/Institutional - Coal"       
 # [18] "Fuel Comb - Electric Generation - Coal"      
@@ -102,16 +94,8 @@ When looking at SCC Level Three Category, you can find *7 Level Three category s
 * Lignite
 * Lignite Coal
 
-
-```r
+```
 levels(SCC$SCC.Level.Three)
-```
-
-```
-## Error: objet 'SCC' introuvable
-```
-
-```r
 # interesting results: identify the judicious Source Category Level 3 type
 # Main idea : find the Source Category Levels 3 types corresponding to:
 ## - Source Category sectors type retained ;
@@ -143,7 +127,9 @@ Reference 3. [Methodologies for U.S. Greenhouse Gas Emissions Projections: Non-C
 
 ### Definition of Motor Vehicle Emissions sources from MOVES (Motor Vehicle Emission Simulator) EPA Website:
 
+```
 As explained in the Website of MOVES2010, the "*MOVES2010* is the state-of-the-art upgrade to EPA’s modeling tools for estimating emissions from *highway vehicles*, based on analysis of millions of emission test results and considerable advances in the Agency’s understanding of vehicle emissions. MOVES2010 replaces the previous model for estimating *on-road mobile source* emissions, MOBILE6.2".
+```
 
 So, I have decided to retain for *Motor Vehicle Emissions* the *Emissions from Highway Vehicles*.
 
