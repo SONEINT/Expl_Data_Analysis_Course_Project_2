@@ -1,9 +1,9 @@
 NEI and SCC DATASETS PRESENTATION
 ==================================================================================
 
-![Exploratory Data Analysis][https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/blob/master/images/ExploratoryDataAnalysis.jpg]
+![Exploratory Data Analysis](https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/blob/master/images/ExploratoryDataAnalysis.jpg)
 
-![EPA][https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/raw/master/images/EPA.jpg]
+![EPA](https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/raw/master/images/EPA.jpg)
 
 PART I : DATASET PRESENTATION
 --------------------------------------------------------
