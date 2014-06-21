@@ -1,9 +1,12 @@
 NEI and SCC DATASETS PRESENTATION
 ==================================================================================
+Coursera - Exploratory Data Analysis
 
-![Exploratory Data Analysis][link]
+![Exploratory Data Analysis](https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/raw/master/images/ExploratoryDataAnalysis.jpg)
 
-![EPA][link]
+United States Environmental Protection Agency
+
+![EPA](https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/raw/master/images/EPA.jpg)
 
 PART I : DATASET PRESENTATION
 --------------------------------------------------------
@@ -65,6 +68,84 @@ After several discussions on *Coursera Exploratory Data Analysis Forums*, quick 
 * Fuel Comb - Residential - Other -----------------> (partially)
 
 
+```r
+levels(SCC$EI.Sector)
+```
+
+```
+## Error: objet 'SCC' introuvable
+```
+
+```r
+# interesting results: indentify the judicious Source Category sectors type
+# [13] "Fuel Comb - Comm/Institutional - Coal"       
+# [18] "Fuel Comb - Electric Generation - Coal"      
+# [51] "Fuel Comb - Industrial Boilers, ICEs - Coal"    
+# [52] "Fuel Comb - Residential - Other"
+```
+
+In the EPA documentations, you can can understand that there are *2 sources of Coal Combustion* in *Fuel Combustion Residential Natural, Gas Oil and Other*:
+
+Reference 1 - paragraphe 3.13 Fuel Combustion – Residential – Natural Gas, Oil, and Other:
+
+“Fuel Comb - Residential – Other” which includes the fuels: 
+(1) coal, 
+(2) liquid petroleum gas and 
+(3) “Biomass; all except Wood”.
+ 
+Which are *Anthracite Coal* & *Bituminous/Subbituminous Coal*
+
+When looking at SCC Level Three Category, you can find *7 Level Three category sources sources* relative to the *4 Coal Comabustion Category sources from EI sectors* retained above, but I have decided to retain only *four Level Three Category sources*:
+
+* Anthracite Coal
+* Bituminous/Subbituminous Coal
+* Lignite
+* Lignite Coal
 
 
+```r
+levels(SCC$SCC.Level.Three)
+```
+
+```
+## Error: objet 'SCC' introuvable
+```
+
+```r
+# interesting results: identify the judicious Source Category Level 3 type
+# Main idea : find the Source Category Levels 3 types corresponding to:
+## - Source Category sectors type retained ;
+## - With a judicious label.
+# Results:
+# [88] "Anthracite Coal" 
+# = YES
+# [156] "Bituminous/Subbituminous Coal" 
+# = YES
+# [267] "Commercial/Industrial" 
+# = NO (not considered for the coal combustion process & negligible)
+# [591] "Lignite" 
+# = YES    
+# [531] "Industrial" 
+# = NO (not considered for the coal combustion process & negligible)
+# [592] "Lignite Coal" 
+# = YES
+# [1032] "Waste Coal" 
+# = NO (not considered as a combustion process & negligible)
+```
+
+
+NOTA: "Commercial/Industrial" and "Industrial" Source Category Level 3 types are not exclusive to coal source - check for the adequate Source Category sectors
+
+RESOURCES :
+Reference 1. [2011 National Emissions Inventory, version 1 Technical Support Document November 2013 - DRAFT](http://www.epa.gov/ttn/chief/net/2008neiv3/2008_neiv3_tsd_draft.pdf)
+Reference 2. [2008 National Emissions Inventory, version 3 Technical Support Document September 2013 - DRAFT](http://www.epa.gov/ttn/chief/net/2011nei/2011_neiv1_tsd_draft.pdf)
+Reference 3. [Methodologies for U.S. Greenhouse Gas Emissions Projections: Non-CO2 and Non-Energy CO2 Sources DECEMBER, 2013](http://www.state.gov/documents/organization/219472.pdf)
+
+### Definition of Motor Vehicle Emissions sources from MOVES (Motor Vehicle Emission Simulator) EPA Website:
+
+As explained in the Website of MOVES2010, the "*MOVES2010* is the state-of-the-art upgrade to EPA’s modeling tools for estimating emissions from *highway vehicles*, based on analysis of millions of emission test results and considerable advances in the Agency’s understanding of vehicle emissions. MOVES2010 replaces the previous model for estimating *on-road mobile source* emissions, MOBILE6.2".
+
+So, I have decided to retain for *Motor Vehicle Emissions* the *Emissions from Highway Vehicles*.
+
+RESOURCES : [MOVES (Motor Vehicle Emission Simulator) Website](http://www.epa.gov/otaq/models/moves/index.htm) & [MOVES FAQ](http://www.epa.gov/otaq/models/moves/420f09073.pdf)
 

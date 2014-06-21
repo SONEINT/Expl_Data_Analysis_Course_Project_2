@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=9" >
 
-<title>DATA SCIENCE SPECIALIZATION COURSE - EXPLORATORY DATA ANALYSIS - COURSE PROJECT 2</title>
+<title>NEI and SCC DATASETS PRESENTATION</title>
 
 <style type="text/css">
 body, td {
@@ -179,7 +179,7 @@ hljs.initHighlightingOnLoad();
 </head>
 
 <body>
-<h1>DATA SCIENCE SPECIALIZATION COURSE - EXPLORATORY DATA ANALYSIS - COURSE PROJECT 2</h1>
+<h1>NEI and SCC DATASETS PRESENTATION</h1>
 
 <p>Coursera - Exploratory Data Analysis</p>
 
@@ -189,29 +189,59 @@ hljs.initHighlightingOnLoad();
 
 <p><img src="https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/raw/master/images/EPA.jpg" alt="EPA"/></p>
 
-<h2>PART I : IMPORTANT INSTRUCTIONS</h2>
+<h2>PART I : DATASET PRESENTATION</h2>
 
-<h3>Description of the Github repository</h3>
+<h3>National Emissions Inventory (NEI)</h3>
 
-<p>You would find:</p>
+<p>The National Emissions Inventory (NEI) is a national compilation of emissions sources collected from state, local, and tribal air agencies as well as emissions information from the Environmental Protection Agency (EPA) emissions programs including the Toxics Release Inventory (TRI), emissions trading programs such as the Acid Rain Program, and data collected as part of EPA regulatory development for reducing emissions of air toxics. The NEI program develops datasets, blends data from these multiple sources, and performs quality assurance steps that further enhance and augment the compiled data. The emissions data in the NEI are compiled for detailed emissions processes within a facility for large “point” sources or as a county total for smaller “nonpoint” sources and spatially dispersed sources such as on-road and nonroad mobile sources. For wildfires and prescribed burning, the data are compiled as day-specific events in the “event” portion of the inventory.</p>
+
+<h3>Polluants</h3>
+
+<p>The pollutants included in the NEI are the pollutants related to implementation of the National Ambient Air Quality Standards (NAAQS), known as criteria air pollutants (CAPs), as well as hazardous air pollutants (HAPs) associated with EPA’s Air Toxics Program. The CAPs have ambient concentration limits or are precursors for pollutants with such limits from the NAAQS program. These pollutants include lead (Pb), carbon monoxide (CO), nitrogen oxides (NOX), volatile organic compounds (VOC), sulfur dioxide (SO2), ammonia (NH3), particulate matter 10 microns or less (PM10) and <em>particulate matter 2.5 microns or less (PM2.5)</em>. The HAP pollutants include the 187 remaining HAP pollutants from the original 188 listed in Section 112(b) of the 1990 Clean Air Act 1 Amendments . Key HAP emissions sources include mercury (Hg), hydrochloric acid (HCl) and other acid gases, heavy metals such as nickel and cadmium, and hazardous organic compounds such as benzene, formaldehyde, and acetaldehyde.</p>
+
+<h3>PM2.5</h3>
+
+<p>The assignment is relative to PM2.5 polluant measures.</p>
+
+<p>The <em>Fine particulate matter (PM2.5)</em> is an <em>ambient air pollutant for which there is strong evidence that it is harmful to human health</em>. In the United States, the Environmental Protection Agency (EPA) is tasked with setting national ambient air quality standards for fine PM and for tracking the emissions of this pollutant into the atmosphere. Approximatly every 3 years, the EPA releases its database on emissions of PM2.5. This database is known as the National Emissions Inventory (NEI). You can read more information about the NEI at the EPA National Emissions Inventory web site.</p>
+
+<p>For each year and for each type of PM source, the NEI records how many tons of PM2.5 were emitted from that source over the course of the entire year. </p>
+
+<p>The data that used for this assignment are for 1999, 2002, 2005, and 2008.</p>
+
+<h3>Sources reported by Air Emissions Reporting Rule (AERR)</h3>
+
+<p>The AERR requires agencies to report all sources of emissions, <em>except fires and biogenic sources</em>. <em>Open fire sources</em> such as wildfires are <em>encouraged but not required</em>.</p>
+
+<p>Sources are <em>divided into large groups</em> called <em>“data categories”</em>: </p>
 
 <ul>
-<li>A README RMD file for general instructions anf exploratory data analysis course projetc 2 general instructions</li>
-<li>CodeBook RMD file for general description of data sets and some definitions, with in particular <em>coal combustion sources</em> and <em>motor vehicules sources</em> definitions choices (IMPORTANT TO READ)</li>
-<li>Plots PNG images directory with plot1, plot2, plot3, plot4, plot5 and plot6 PNG format images ;</li>
-<li>Plots R codes directory with R codes to produce plot1, plot2, plot3, plot4, plot5 and plot6 PNG files ;</li>
-<li>Plots R codes in PDF format (for Coursera purposes)</li>
-<li>Plots R codes in TXT format (for Coursera purposes)</li>
-<li>A references directory for reference documentations and original datasets</li>
+<li><em>stationary sources</em> are “point” or “nonpoint” (county totals) ;</li>
+<li><em>mobile sources</em> are either <em>on-road</em> (cars and trucks driven on roads) or <em>non-road</em> (locomotives, aircraft, marine, off-road vehicles and nonroad equipment such as lawn and garden equipment).</li>
 </ul>
 
-<p>I suggest you read first the PART I of the README RMD file and have a look the CodeBook RMD file.</p>
+<p>Based on the AERR requirements, S/L/T agencies submit emissions or model inputs of <em>point, nonpoint, on-road mobile,non-road mobile,and fires emissions sources</em>.</p>
+
+<p>The <em>sectors</em> were developed to better <em>group emissions for both CAP and HAP summary purposes</em>. The sectors are based sim ply on grouping the emissions by the emissions process based on the <em>source classification code (SCC)</em> to the EIS sector</p>
+
+<p>The SCC-EIS Sector cross-walk used for the summaries provided can be found in the Microsoft® Excel ® spreadsheet <a href="ftp://ftp.epa.gov/EmisInventory/2011/doc/scc_eis_crosswalk_2011neiv1.xlsx">scc_eissector_xwalk_2011neiv1.xlsx</a> for 2011 NEI dataset.</p>
+
+<h3>Definitions</h3>
+
+<ul>
+<li><p>The <em>NEI Point data category</em> contains emissions estimates for sources that are individually inventoried and usually located at a fixed, stationary location, although portable sources such as some asphalt or rock crushing operations are also included. Point sources include large industrial facilities and electric power plants, but also increasingly include many smaller industrial and commercial facilities, such as dry cleaners and gas stations, which had traditionally been included in Nonpoint sources. The choice of whether these smaller sources are estimated individually and included as point sources or inventoried as a Nonpoint source County or Tribal area aggregate is determined by the separate State, Local, or Tribal air agency.</p></li>
+<li><p>The <em>NEI Nonpoint data category</em> contains emissions estimates for sources which individually are too small in magnitude or too numerous to inventory as individual point sources, and which can often be estimated more accurately as a single aggregate source for a County or Tribal area. Examples are residential heating and consumer solvent use.</p></li>
+</ul>
+
+<p><em>The *NEI Onroad and Nonroad data categories</em> contain mobile sources which are estimated for the 2011 NEI v1 via the MOVES2010b and NONROAD models, respectively. NONROAD was run within the National Mobile Inventory Model (NMIM). Note that emissions data for aircraft, locomotives, and commercial marine vessels are not included in the Nonroad data category starting with the 2008 NEI. Aircraft engine emissions occurring during Landing and Takeoff operations and the Ground Support Equipment and Auxiliary Power Units associated with the aircraft are included in the point data category at individual airports. Emissions from locomotives that occur at rail yards are also included in the point data category. In-flight aircraft emissions, locomotive emissions outside of the rail yards, and commercial marine vessel emissions (both underway and port emissions) are included in the NonPoint data category.</p>
+
+<p><em>The *Events data category</em> includes wildfires, wild land fire use and prescribed burns. Wild land fire use is controlling a wildfire to use as a prescribed burn. This web page provides emissions for this data category as county totals. Day-specific and fire-specific emissions are available on the Emissions Modeling Clearinghouse with the 2011 emissions platform data.</p>
+
+<h2>PART II : VARIABLE DEFINITION (Coal Combustion &amp; Motor Vehicle Emissions)</h2>
 
 <h3>Definition of Coal Combustion sources from EPA references and SCC/NEI datasets analysis</h3>
 
-<p>After several discussions on <em>Coursera Exploratory Data Analysis Forums</em>, quick analysis of the * EPA National Emissions Inventory documentations* (references 1 &amp; 2) and deep analysis of the <code>SCC</code> &amp; <code>NEI</code> datasets I have decided to retain as <em>Coal Combustion sources</em> the <em>four Coal Comabustion Category sources from EI sectors</em> and the <em>four Level Three Category sources</em>:</p>
-
-<p>EI SECTORS:</p>
+<p>After several discussions on <em>Coursera Exploratory Data Analysis Forums</em>, quick analysis of the * EPA National Emissions Inventory documentations* (references 1 &amp; 2) and deep analysis of the <code>SCC</code> &amp; <code>NEI</code> datasets I have decided to retain as <em>Coal Combustion sources</em> the <em>four Coal Comabustion Category sources from EI sectors</em>:</p>
 
 <ul>
 <li>Fuel Comb - Comm/Institutional - Coal</li>
@@ -220,7 +250,31 @@ hljs.initHighlightingOnLoad();
 <li>Fuel Comb - Residential - Other &mdash;&mdash;&mdash;&mdash;&mdash;&ndash;&gt; (partially)</li>
 </ul>
 
-<p>LEVEL THREE CATEGORIES:</p>
+<pre><code class="r">levels(SCC$EI.Sector)
+</code></pre>
+
+<pre><code>## Error: objet &#39;SCC&#39; introuvable
+</code></pre>
+
+<pre><code class="r"># interesting results: indentify the judicious Source Category sectors type
+# [13] &quot;Fuel Comb - Comm/Institutional - Coal&quot;       
+# [18] &quot;Fuel Comb - Electric Generation - Coal&quot;      
+# [51] &quot;Fuel Comb - Industrial Boilers, ICEs - Coal&quot;    
+# [52] &quot;Fuel Comb - Residential - Other&quot;
+</code></pre>
+
+<p>In the EPA documentations, you can can understand that there are <em>2 sources of Coal Combustion</em> in <em>Fuel Combustion Residential Natural, Gas Oil and Other</em>:</p>
+
+<p>Reference 1 - paragraphe 3.13 Fuel Combustion – Residential – Natural Gas, Oil, and Other:</p>
+
+<p>“Fuel Comb - Residential – Other” which includes the fuels: 
+(1) coal, 
+(2) liquid petroleum gas and 
+(3) “Biomass; all except Wood”.</p>
+
+<p>Which are <em>Anthracite Coal</em> &amp; <em>Bituminous/Subbituminous Coal</em></p>
+
+<p>When looking at SCC Level Three Category, you can find <em>7 Level Three category sources sources</em> relative to the <em>4 Coal Comabustion Category sources from EI sectors</em> retained above, but I have decided to retain only <em>four Level Three Category sources</em>:</p>
 
 <ul>
 <li>Anthracite Coal</li>
@@ -229,7 +283,39 @@ hljs.initHighlightingOnLoad();
 <li>Lignite Coal</li>
 </ul>
 
-<p>See the CodeBook RMD file for further explanantions.</p>
+<pre><code class="r">levels(SCC$SCC.Level.Three)
+</code></pre>
+
+<pre><code>## Error: objet &#39;SCC&#39; introuvable
+</code></pre>
+
+<pre><code class="r"># interesting results: identify the judicious Source Category Level 3 type
+# Main idea : find the Source Category Levels 3 types corresponding to:
+## - Source Category sectors type retained ;
+## - With a judicious label.
+# Results:
+# [88] &quot;Anthracite Coal&quot; 
+# = YES
+# [156] &quot;Bituminous/Subbituminous Coal&quot; 
+# = YES
+# [267] &quot;Commercial/Industrial&quot; 
+# = NO (not considered for the coal combustion process &amp; negligible)
+# [591] &quot;Lignite&quot; 
+# = YES    
+# [531] &quot;Industrial&quot; 
+# = NO (not considered for the coal combustion process &amp; negligible)
+# [592] &quot;Lignite Coal&quot; 
+# = YES
+# [1032] &quot;Waste Coal&quot; 
+# = NO (not considered as a combustion process &amp; negligible)
+</code></pre>
+
+<p>NOTA: &ldquo;Commercial/Industrial&rdquo; and &ldquo;Industrial&rdquo; Source Category Level 3 types are not exclusive to coal source - check for the adequate Source Category sectors</p>
+
+<p>RESOURCES :
+Reference 1. <a href="http://www.epa.gov/ttn/chief/net/2008neiv3/2008_neiv3_tsd_draft.pdf">2011 National Emissions Inventory, version 1 Technical Support Document November 2013 - DRAFT</a>
+Reference 2. <a href="http://www.epa.gov/ttn/chief/net/2011nei/2011_neiv1_tsd_draft.pdf">2008 National Emissions Inventory, version 3 Technical Support Document September 2013 - DRAFT</a>
+Reference 3. <a href="http://www.state.gov/documents/organization/219472.pdf">Methodologies for U.S. Greenhouse Gas Emissions Projections: Non-CO2 and Non-Energy CO2 Sources DECEMBER, 2013</a></p>
 
 <h3>Definition of Motor Vehicle Emissions sources from MOVES (Motor Vehicle Emission Simulator) EPA Website:</h3>
 
@@ -237,110 +323,7 @@ hljs.initHighlightingOnLoad();
 
 <p>So, I have decided to retain for <em>Motor Vehicle Emissions</em> the <em>Emissions from Highway Vehicles</em>.</p>
 
-<p>See the CodeBook RMD file for further explanantions.</p>
-
-<h2>PART II : COURSE PROJECT INSTRUCTIONS</h2>
-
-<h3>Introduction</h3>
-
-<p>Fine particulate matter (PM2.5) is an ambient air pollutant for which there is strong evidence that it is harmful to human health. In the United States, the Environmental Protection Agency (EPA) is tasked with setting national ambient air quality standards for fine PM and for tracking the emissions of this pollutant into the atmosphere. Approximatly every 3 years, the EPA releases its database on emissions of PM2.5. This database is known as the National Emissions Inventory (NEI). You can read more information about the NEI at the EPA National Emissions Inventory web site.</p>
-
-<p>For each year and for each type of PM source, the NEI records how many tons of PM2.5 were emitted from that source over the course of the entire year. The data that you will use for this assignment are for 1999, 2002, 2005, and 2008.</p>
-
-<h3>Data</h3>
-
-<p>The data for this assignment are available from the course web site as a single zip file:</p>
-
-<p><a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip">Data for Peer Assessment</a> [29Mb]</p>
-
-<p>The zip file contains two files:</p>
-
-<p>PM2.5 Emissions Data (<code>summarySCC_PM25.rds</code>): This file contains a data frame with all of the PM2.5 emissions data for 1999, 2002, 2005, and 2008. For each year, the table contains number of <em>tons</em> of PM2.5 emitted from a specific type of source for the entire year. Here are the first few rows.</p>
-
-<pre><code class="r">##     fips      SCC Pollutant Emissions  type year
-## 4  09001 10100401  PM25-PRI    15.714 POINT 1999
-## 8  09001 10100404  PM25-PRI   234.178 POINT 1999
-## 12 09001 10100501  PM25-PRI     0.128 POINT 1999
-## 16 09001 10200401  PM25-PRI     2.036 POINT 1999
-## 20 09001 10200504  PM25-PRI     0.388 POINT 1999
-## 24 09001 10200602  PM25-PRI     1.490 POINT 1999
-</code></pre>
-
-<p>Legend:</p>
-
-<ul>
-<li><code>fips</code>: A five-digit number (represented as a string) indicating the U.S. county</li>
-<li><code>SCC</code>: The name of the source as indicated by a digit string (see source code classification table)</li>
-<li><code>Pollutant</code>: A string indicating the pollutant</li>
-<li><code>Emissions</code>: Amount of PM2.5 emitted, in tons</li>
-<li><code>type</code>: The type of source (point, non-point, on-road, or non-road)</li>
-<li><code>year</code>: The year of emissions recorded</li>
-</ul>
-
-<p>Source Classification Code Table (<code>Source_Classification_Code.rds</code>): This table provides a mapping from the SCC digit strings int he Emissions table to the actual name of the PM2.5 source. The sources are categorized in a few different ways from more general to more specific and you may choose to explore whatever categories you think are most useful. For example, source “10100101” is known as “Ext Comb /Electric Gen /Anthracite Coal /Pulverized Coal”.</p>
-
-<p>You can read each of the two files using the <code>readRDS()</code> function in R. For example, reading in each file can be done with the following code:</p>
-
-<pre><code>## This first line will likely take a few seconds. Be patient!
-NEI &lt;- readRDS(&quot;summarySCC_PM25.rds&quot;)
-SCC &lt;- readRDS(&quot;Source_Classification_Code.rds&quot;)
-</code></pre>
-
-<p>as long as each of those files is in your current working directory (check by calling dir() and see if those files are in the listing).</p>
-
-<h3>Assignment</h3>
-
-<p>The overall goal of this assignment is to explore the National Emissions Inventory database and see what it say about fine particulate matter pollution in the United states over the 10-year period 1999–2008. You may use any R package you want to support your analysis.</p>
-
-<h3>Questions</h3>
-
-<p>You must address the following questions and tasks in your exploratory analysis. For each question/task you will need to make a single plot. Unless specified, you can use any plotting system in R to make your plot.</p>
-
-<ol>
-<li><p>Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? Using the <em>base</em> plotting system, make a plot showing the <em>total</em> PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.</p></li>
-<li><p>Have total emissions from PM2.5 decreased in the <em>Baltimore City</em>, Maryland <code>(fips == &quot;24510&quot;)</code> from 1999 to 2008? Use the <em>base</em> plotting system to make a plot answering this question.</p></li>
-<li><p>Of the four types of sources indicated by the <code>type</code> (point, nonpoint, onroad, nonroad) variable, which of these four sources have seen decreases in emissions from 1999–2008 for <em>Baltimore City</em>? Which have seen increases in emissions from 1999–2008? Use the <em>ggplot2</em> plotting system to make a plot answer this question.</p></li>
-<li><p>Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?</p></li>
-<li><p>How have emissions from motor vehicle sources changed from 1999–2008 in <em>Baltimore City</em>?</p></li>
-<li><p>Compare emissions from motor vehicle sources in Baltimore City with emissions from motor vehicle sources in <em>Los Angeles County</em>, California (<code>fips == &quot;06037&quot;</code>). Which city has seen greater changes over time in motor vehicle emissions?</p></li>
-</ol>
-
-<h3>Making and Submitting Plots</h3>
-
-<p>For each plot you should</p>
-
-<p>Construct the plot and save it to a <em>PNG file</em>.</p>
-
-<ul>
-<li>Create a separate R code file (<code>plot1.R</code>, <code>plot2.R</code>, etc.) that constructs the corresponding plot, i.e. code in <code>plot1.R</code> constructs the plot1.png plot. Your code file should include code for reading the data so that the plot can be fully reproduced. You should also include the code that creates the PNG file. Only include the code for a single plot (i.e. <code>plot1.R</code> should only include code for producing <code>plot1.png</code>)</li>
-<li>Upload the PNG file on the Assignment submission page</li>
-<li>Copy and paste the R code from the corresponding R file into the text box at the appropriate point in the peer assessment.</li>
-</ul>
-
-<h2>PART III : RESOURCES</h2>
-
-<ol>
-<li><p><a href="https://www.coursera.org/course/exdata">Exploratory Data Analysis course at @Coursera</a></p></li>
-<li><p><a href="https://support.rstudio.com/hc/en-us/articles/200488468-R-Markdown">Markdown</a></p></li>
-<li><p>EPA Government references</p></li>
-</ol>
-
-<p>Reference 1. <a href="http://www.epa.gov/ttn/chief/net/2008neiv3/2008_neiv3_tsd_draft.pdf">2011 National Emissions Inventory, version 1 Technical Support Document November 2013 - DRAFT</a>
-Reference 2. <a href="http://www.epa.gov/ttn/chief/net/2011nei/2011_neiv1_tsd_draft.pdf">2008 National Emissions Inventory, version 3 Technical Support Document September 2013 - DRAFT</a></p>
-
-<ol>
-<li>STATE Government references</li>
-</ol>
-
-<p>Reference 3. <a href="http://www.state.gov/documents/organization/219472.pdf">Methodologies for U.S. Greenhouse Gas Emissions Projections: Non-CO2 and Non-Energy CO2 Sources DECEMBER, 2013</a></p>
-
-<ol>
-<li>MOVES Government references</li>
-</ol>
-
-<p>Reference 4. <a href="http://www.epa.gov/otaq/models/moves/index.htm">MOVES (Motor Vehicle Emission Simulator) Website</a></p>
-
-<p>Reference 5. <a href="http://www.epa.gov/otaq/models/moves/420f09073.pdf">MOVES FAQ</a></p>
+<p>RESOURCES : <a href="http://www.epa.gov/otaq/models/moves/index.htm">MOVES (Motor Vehicle Emission Simulator) Website</a> &amp; <a href="http://www.epa.gov/otaq/models/moves/420f09073.pdf">MOVES FAQ</a></p>
 
 </body>
 
