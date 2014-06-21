@@ -2,9 +2,11 @@ NEI and SCC DATASETS PRESENTATION
 ==================================================================================
 
 Coursera - Exploratory Data Analysis
+
 ![Exploratory Data Analysis](https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/raw/master/images/ExploratoryDataAnalysis.jpg)
 
 United States Environmental Protection Agency
+
 ![EPA](https://github.com/SONEINT/Expl_Data_Analysis_Course_Project_2/raw/master/images/EPA.jpg)
 
 PART I : DATASET PRESENTATION
