@@ -127,11 +127,9 @@ Reference 3. [Methodologies for U.S. Greenhouse Gas Emissions Projections: Non-C
 
 ### Definition of Motor Vehicle Emissions sources from MOVES (Motor Vehicle Emission Simulator) EPA Website:
 
-```
-As explained in the Website of MOVES2010, the "*MOVES2010* is the state-of-the-art upgrade to EPA’s modeling tools for estimating emissions from *highway vehicles*, based on analysis of millions of emission test results and considerable advances in the Agency’s understanding of vehicle emissions. MOVES2010 replaces the previous model for estimating *on-road mobile source* emissions, MOBILE6.2".
-```
+As explained in the Website of MOVES2010, the "*MOVES2010* is the state-of-the-art upgrade to EPA’s modeling tools for estimating emissions from **highway vehicles**, based on analysis of millions of emission test results and considerable advances in the Agency’s understanding of vehicle emissions. MOVES2010 replaces the previous model for estimating *on-road mobile source* emissions, MOBILE6.2".
 
-So, I have decided to retain for *Motor Vehicle Emissions* the *Emissions from Highway Vehicles*.
+So, I have decided to retain for **Motor Vehicle Emissions** the **Emissions from Highway Vehicles**.
 
 RESOURCES : [MOVES (Motor Vehicle Emission Simulator) Website](http://www.epa.gov/otaq/models/moves/index.htm) & [MOVES FAQ](http://www.epa.gov/otaq/models/moves/420f09073.pdf)
 
